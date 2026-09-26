@@ -144,17 +144,19 @@
 **Time spent**: 60 minutes
 ---
 
-### Entry 2 - [Date and Time]
+### Entry 2 - [September 26,2026, 2:30pm]
 **What I did**:
-
+- finished adding feauture 1
 **Details**:
-
+- added a priority label to the proccess class
+- modifid the main class to generate a priorit number 1 through 10
+- modified the output to include the priority number and added to queue
 **Challenges**:
-
+- the output wouldnt show first
 **Solution**:
-
+- i had to scroll down in the terminal to see it...
 **Time spent**:
-
+- 60 minutes
 ---
 
 ### Entry 3 - [Date and Time]
