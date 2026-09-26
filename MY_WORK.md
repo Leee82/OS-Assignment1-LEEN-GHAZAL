@@ -29,11 +29,11 @@
 
 | Field | Your Answer |
 |-------|-------------|
-| **Full Name** | [Write your full name here] |
-| **Student ID** | [Write your student ID here] |
-| **University Email** | [yourid]@std.psau.edu.sa |
-| **GitHub Username** | [your-github-username] |
-| **Repository Link** | [Paste your repository link here] |
+| **Full Name** | Leen Ahmad Ghazal |
+| **Student ID** | 445052798 |
+| **University Email** | 445052798@std.psau.edu.sa |
+| **GitHub Username** | Leee82 |
+| **Repository Link** | https://github.com/Leee82/OS-Assignment1-LEEN-GHAZAL |
  
 ---
 
