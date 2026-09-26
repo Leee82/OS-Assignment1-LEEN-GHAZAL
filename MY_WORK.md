@@ -129,17 +129,19 @@
 
 ## Your Development Log
 
-### Entry 1 - [Date and Time]
+### Entry 1 - [September 24, 2026, 7:00pm]
 **What I did**:
-
+- had an overview of the assignment and started with the basics
 **Details**:
-
+- set up a github account with my uni email
+- forked the repository and renamed it with my name
+- changed my id in the schedular simulation
+- made my first commit
 **Challenges**:
-
+- i didnt have a jdk installed
 **Solution**:
-
-**Time spent**:
-
+- installed jdk
+**Time spent**: 60 minutes
 ---
 
 ### Entry 2 - [Date and Time]
