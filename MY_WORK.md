@@ -174,17 +174,19 @@
 - 30 minutes
 ---
 
-### Entry 4 - [Date and Time]
+### Entry 4 - [september 27, 2026, 2:30pm]
 **What I did**:
-
+- changed the author of the commits to the correct user(IMPORTANT PLEASE READ)
 **Details**:
-
+- I did 7 commits and pushed them to the repository over the course of 3 days before noticing that the author of the commits is my username of my personal account.
+- i had to change it to my university account resesting the past 7 commits to the same time. so please understand.
+- the repository account is my university email from the start, the issue was with vs code author only.
 **Challenges**:
-
+- author not matching
 **Solution**:
-
+- reseting the commits with the corrrect author
 **Time spent**:
-
+- 30 minutes
 ---
 
 ### Entry 5 - [Date and Time]
