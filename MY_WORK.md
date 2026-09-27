@@ -159,17 +159,19 @@
 - 60 minutes
 ---
 
-### Entry 3 - [Date and Time]
+### Entry 3 - [September 27, 2026, 2:00pm]
 **What I did**:
-
+- added feature 2: context switching count
 **Details**:
-
+- added the static int to the schedularsmiualtion class.
+- incremented it after every switch
+- printed the output at the end
 **Challenges**:
-
+- an error kept coming up when intitalizing the counter
 **Solution**:
-
+- since it is static it should be put outside the main method
 **Time spent**:
-
+- 30 minutes
 ---
 
 ### Entry 4 - [Date and Time]
