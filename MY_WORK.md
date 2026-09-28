@@ -189,17 +189,20 @@
 - 30 minutes
 ---
 
-### Entry 5 - [Date and Time]
+### Entry 5 - [September 28, 2026, 10:15pm]
 **What I did**:
-
+- added feature 3
 **Details**:
-
+- intiallized the variables
+- recorded each time the proccess is finished
+- created an array and stored the proccess in
+- designed a table summary for output
 **Challenges**:
-
+- waiting time was outputed as 0 in all processes
 **Solution**:
-
+-  called setCompletionTime() inside process method immediately when remaining time reaches 0
 **Time spent**:
-
+- 2 hours
 ---
 
 ### Entry 6 - [Optional - Date and Time]
