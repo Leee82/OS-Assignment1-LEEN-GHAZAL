@@ -222,13 +222,13 @@
 
 > 💡 **TIP:** Fill this in **last**, after all entries are written.
 
-**Total time spent on assignment**: [X hours]
+**Total time spent on assignment**: [5 hours]
 
-**Most challenging part**:
+**Most challenging part**: implementing feature 3
 
-**Most interesting learning**:
+**Most interesting learning**: learning how to use github correctly
 
-**What I would do differently next time**:
+**What I would do differently next time**: check the correct author for my commits way before
 
 ---
 
@@ -248,7 +248,9 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+using threads is much more convenient because thread creation is more lightweight than process creation. It starts with implementing the interface runnable in my class. Then, calling the start() method in my main method to trigger the run() method. the thread.sleep method sets a specified period of time for a certain thread to move into the waiting queue. Threads take turns according to their burst times on the cpu to organize their running by different algorithms. What surprised me is how organized the thread execution is when demonstrating their exact work in the output. 
+
+
 
 ## Question 2: What was the most challenging part of this assignment?
 
@@ -256,7 +258,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+the most challeging part was implementing feature 3 and it took me about 2 hours. i can say i understood what needed to be done and what to add excatly but "where" was hard. it was tough because searching for the right place in a code you didnt write yourself can be confusing. this exact method: setCompletionTime(System.currentTimeMillis()) i tried putting in 3 different places before getting the right output. Also, shaping the table to portray the outputs was kind of hard and alligning the right data in the right column with the /t.    
 
 ## Question 3: How did you overcome the challenges you faced?
 
@@ -264,7 +266,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+ i needed to reread the schedular simulation class again too see where i want to record the time of the thread completed firstly. i was constantly rerunning the program after each change to find what was wrong. i added a couple of print statements to see where exactly i want the table in the output is placed. i also asked for help from my father since he has a little bit of background in java. he suggested making an array to traverse through the threads nstead of writing everything manually.
 
 ## Question 4: How can you apply multithreading concepts in real-world applications?
 
@@ -272,7 +274,7 @@
 
 **Your Answer:** *(5-7 sentences)*
 
-[Write your answer here.]
+Multithreading is really important in real world apps like PUBG to keep the game running without lagging or freezing. just like how we created separate threads in our code, PUBG uses threads to handle player movement, sounds, and graphics all at the same time. the game gives small time slices to each task, similar to how our time quantum worked. It uses a ready queue concept to organize which task gets CPU time next so graphics don't stop the network updates. Fast context switching between processing other players and rendering the map makes everything happen in real time. lastly using multithreading lets the game run background stuff smoothly so we get a good playing experience.
 
 ### Optional: What would you like to learn more about?
 
