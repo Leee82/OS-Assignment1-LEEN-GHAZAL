@@ -306,7 +306,7 @@ Multithreading is really important in real world apps like PUBG to keep the game
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+A thread is more lightweight than a process so in this project, we used java threads because creating separate processes takes way more overhead and memory. First, threads can share memory easily, allowing us to access shared data like contextSwitchCounter and processQueue directly. Second, creating threads with new Thread(process) in addProcessToQueue() is much faster and lighter than creating whole new processes.the class named Process in our code is just a custom class we built to store process data, while the actual execution is handled by real java thread objects. Calling currentThread.start() in our loop triggers the run() method to execute each process step by step.
 
 ## Question 2: Ready Queue Behavior
 
@@ -318,15 +318,25 @@ Multithreading is really important in real world apps like PUBG to keep the game
 
 **Your Answer:** *(3-5 sentences)*
 
-[Write your answer here.]
+In Round-Robin scheduling, when a process doesn't finish within its time quantum, it yields the CPU, gets paused, and is placed back at the end of the ready queue so other processes can get their turn.
 
 Example from my output:
-```
-[Paste a relevant snippet from your program output here showing a process being re-queued]
-```
+//note: this is the second time it entered the excution:
+
+? P3 executing quantum [4000ms] 
+  ? Quantum progress: [███████████████] 100%
+  ? P3 completed quantum 4000ms │ Overall progress: [███████████████████░] 97%
+     Remaining time: 165ms
+  ? P3 yields CPU for context switch
+
+  ? P3 (Priority: 9 enters the ready queue...) │ Burst time: 8165ms
+┌─ Ready Queue ─────────────────────────────────────────────────────────────────
+│ [P5 ? P6 ? P7 ? P8 ? P10 ? P11 ? P12 ? P13 ? P15 ? P16 ? P1 ? P3]
+└───────────────────────────────────────────────────────────────────────────────
 
 **Explanation of example:**
-[Explain what is happening in the output snippet you pasted.]
+
+In my simulation run, P3 had a burst time of 8165ms, so it could not complete in its first 4000ms slice and was re-queued 2 times before it finally finished execution. Re-queueing is really important for fairness because it prevents a long process from taking over the CPU and guarantees that every process gets equal opportunities to run.
 
 ## Question 3: Thread Lifecycle
 
@@ -336,15 +346,15 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences overall; one short explanation per state)*
 
-1. **New**: [When is P1 in the New state?]
+1. **New**: P3 enters the new state when we create its thread object using new Thread(process) inside the addProcessToQueue() method.
 
-2. **Runnable**: [When does P1 become Runnable?]
+2. **Runnable**: P3 moves to the runnable state when processQueue.add(thread) puts it in line, and ready to be selected by the CPU scheduler.
 
-3. **Running**: [When is P1 Running?]
+3. **Running**: P3 transittions to the running state when the main scheduler loop calls currentThread.start(), which triggers P3 run() method to execute its time quantum on the CPU.
 
-4. **Waiting**: [When and why would a thread be Waiting?]
+4. **Waiting**: P3 enters the waiting state when Thread.sleep(stepTime) is called inside its run(). it waits because it needs to pause its execution for a set duration to represent CPU processing time.
 
-5. **Terminated**: [When is P1 Terminated?]
+5. **Terminated**: P3 reaches the terminated state after its run() method completes execution and finished running.
 
 ## Question 4: Real-World Applications
 
@@ -354,32 +364,32 @@ Example from my output:
 
 **Your Answer:** *(3-5 sentences per example)*
 
-### Example 1 (operating-system level): [Name of scenario]
+### Example 1 (operating-system level): OS CPU Scheduling for Desktop Applications
 
 **Description**:
-[Describe the real-world scenario.]
+An operating system uses roundrobin scheduling to run multiple applications like a web browser, a code editor, and a music player on a single CPU core. Each open app acts like a Process in our code, getting a small time slice to run before the OS performs a context switch to move to the next app.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+It provides fairness and high responsiveness because every application gets continuous access to the CPU. This prevents a heavy program from locking up the computer and keeps the user interface smooth and interactive.
 
-### Example 2: [Name of application/scenario]
+### Example 2: Google Handling User Requests
 
 **Description**:
-[Describe the real-world scenario or application.]
+A web server like google handling incoming web requests from multiple users at the same time uses roundrobin thread scheduling to process incoming traffic. each user request acts as a process, the server processing turn is the time quantum, and switching between serving different users is the context switch.
 
 **Why Round-Robin works well here**:
-[Fairness, responsiveness, predictability?]
+it ensures fairness and predictability by preventing a huge file download from one user from blocking other users requests. Every visitor gets their request processed in order, keeping response times low and balanced across all users.
 
 ## Summary
 
 **Key concepts I understood through these questions:**
-1.
-2.
-3.
+1. How roundrobin scheduling gives every process a fair time quantum to execute on the CPU.
+2. The difference between threads and processes.
+3. How context switching and re-queueing keep execution fair when a process needs more CPU time.
 
 **Concepts I need to study more:**
-1.
-2.
+1. how priority values change the order of execution
+2. how other scheduling techniqes work
 
 ---
 
